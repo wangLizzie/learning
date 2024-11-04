@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="info">
+    更进一步，背景渐变动画 && 文字裁剪
+    大家都见过理发店或者打印店的门头彩虹广告语，借助backgroundClip属性和动画可以完美实现
+  </div>
+  <div class="text">保健沐足按摩</div>
+</body>
+</html>
+<style>
+  .info {
+    display: none;
+  }
+  .text {
+    width: 500px;
+    margin: 50px auto;
+    line-height: 100px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    z-index: 1;
+    font-size: 80px;
+    font-weight: bold;
+    background: linear-gradient(90deg, red 0, orange 15%, yellow 30%, green 45%, teal 60%, blue 75%, purple 90% ,purple 100%);
+    background-clip: text;
+    color: transparent;
+    animation: changeColor .5s linear infinite alternate;
+}
+
+@keyframes changeColor {
+    0% {
+        background-image: linear-gradient(90deg, red 0, orange 15%, yellow 30%, green 45%, teal 60%, blue 75%, purple 90% ,purple 100%);
+    }
+    50% {
+        background-image: linear-gradient(90deg, deeppink 0, yellowgreen 15%, fuchsia 30%, lime 45%, olive 60%, aqua 75%, coral 90% ,brown 100%);
+    }
+    100% {
+        background-image: linear-gradient(-90deg, red 0, orange 15%, yellow 30%, green 45%, teal 60%, blue 75%, purple 90% ,purple 100%);
+    }
+}
+</style>

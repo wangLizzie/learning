@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="info">
+    发散思维
+    <p>用clip text 属性实现文字渐变的效果</p>
+  </div>
+  <div class="clip">background-clip: text</div>
+</body>
+</html>
+<style>
+  .info {
+    display: none;
+  }
+
+  .clip {
+    font-size: 54px;
+    color: transparent;
+    margin: 50px auto;
+    background: linear-gradient(45deg, #ffeb3b, #009688, yellowgreen, pink, #03a9f4, #8bc34a);
+    background-clip: text;
+    animation: huerotate 3s infinite;
+    text-align: center;
+  }
+
+  @keyframes huerotate {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+</style>
